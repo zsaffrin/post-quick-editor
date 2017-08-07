@@ -1,0 +1,68 @@
+{
+  "name": "post-quick-editor",
+  "version": "0.0.1",
+  "description": "A WordPress plugin for quick edits to your recent posts",
+  "scripts": {
+    "build": "NODE_ENV=production webpack -p --config webpack.production.config.js",
+    "start": "webpack-dev-server --port 3000",
+    "test": "jest --verbose",
+    "test:watch": "jest --watch --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zsaffrin/post-quick-editor.git"
+  },
+  "author": "Zach Saffrin <zach@zachsaffrin.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zsaffrin/post-quick-editor/issues"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "enzyme": "^2.9.1",
+    "express": "^4.15.3",
+    "font-awesome": "^4.7.0",
+    "http-proxy": "^1.16.2",
+    "jest": "^20.0.4",
+    "promise-polyfill": "^6.0.2",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.1.1",
+    "react-test-renderer": "^15.6.1",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5",
+    "whatwg-fetch": "^2.0.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-html": "^2.0.3",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
+    "file-loader": "^0.11.1",
+    "node-sass": "^4.5.3",
+    "react-svg-loader": "^1.1.1",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.18.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "<rootDir>/test/mocks/styleMock.js"
+    }
+  }
+}

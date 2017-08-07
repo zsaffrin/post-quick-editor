@@ -1,0 +1,18 @@
+{
+  "extends": ["airbnb"],
+  "globals": {
+    "document": true,
+    "window": true,
+  },
+  "plugins": ["html", "react"],
+  "rules": {
+    "camelcase": "off",
+    "indent": ["error", "tab"],
+    "no-console": ["error", { allow: ["warn", "error", "info"] }],
+    "no-tabs": "off",
+    "no-trailing-spaces": "off",
+    "react/jsx-indent": ["error", "tab"],
+    "react/jsx-indent-props": ["error", "tab"],
+    "react/jsx-filename-extension": "off",
+  },
+}

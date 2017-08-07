@@ -1,0 +1,40 @@
+
+$text-input-border-color: #ccc;
+
+.post {
+	align-items: center;
+	display: flex;
+
+	.post-image {
+		padding: .2em;
+
+		img {
+			border-radius: 2px;
+			width: 4em;
+		}
+	}
+
+	.post-title {
+		flex: 1 1 auto;
+
+		form { margin: 0; }
+
+		.post-title-input {
+			border: 1px solid $text-input-border-color;
+			border-radius: .2em;
+			color: inherit;
+			font-family: inherit;
+			font-size: .85em;
+			font-weight: inherit;
+			padding: .25em;
+			width: 100%;
+		}
+	}
+
+	.post-actions {
+		display: flex;
+		padding: .25em;
+
+		& > * { margin: .25em; }
+	}
+}

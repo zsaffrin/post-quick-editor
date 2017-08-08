@@ -137,7 +137,6 @@ class Post extends Component {
 					/>
 					<Button
 						title="Cancel"
-						type="danger"
 						faIcon="ban"
 						action={this.handleCancel}
 					/>
@@ -164,8 +163,13 @@ class Post extends Component {
 			);
 		}
 
+		let statusEffect;
+		if (this.state.isConfirmDelete) {
+			statusEffect = 'danger-bg';
+		}
+
 		return (
-			<div className="post">
+			<div className={`post ${statusEffect}`}>
 				<div className="post-image">{imageField}</div>
 				<div className="post-title">{titleField}</div>
 				{actionsField}

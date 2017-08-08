@@ -1,10 +1,16 @@
 
+$post-border-color: #ecf0f1;
 $text-input-border-color: #bdc3c7;
 $danger-text-color: #c0392b;
+$danger-bg-color: #ffd7d3;
 
 .post {
 	align-items: center;
 	display: flex;
+
+	&:not(:last-child) {
+		border-bottom: 1px solid $post-border-color;
+	}
 
 	.post-image {
 		padding: .2em;
@@ -25,7 +31,7 @@ $danger-text-color: #c0392b;
 			border-radius: .2em;
 			color: inherit;
 			font-family: inherit;
-			font-size: .85em;
+			font-size: .9em;
 			font-weight: inherit;
 			padding: .25em;
 			width: 100%;
@@ -42,5 +48,9 @@ $danger-text-color: #c0392b;
 	.danger-text {
 		color: $danger-text-color;
 		font-weight: bold;
+	}
+
+	&.danger-bg {
+		background: $danger-bg-color;
 	}
 }

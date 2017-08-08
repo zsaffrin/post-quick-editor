@@ -5,7 +5,7 @@ import Post from './Post';
 
 require('../styles/App.scss');
 
-const WP_URL = '/wp-json/wp/v2';
+const WP_URL = 'http://localhost:8888/wp-json/wp/v2';
 
 class App extends Component {
 	constructor(props) {
@@ -72,7 +72,7 @@ class App extends Component {
 
 		return (
 			<div id="app">
-				<h2>{appTitle}</h2>
+				<h3>{appTitle}</h3>
 				<div className="posts">
 					{postNodes}
 				</div>

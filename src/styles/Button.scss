@@ -32,7 +32,7 @@ $button-colors: (
 	display: flex;
 	font-size: .85em;
 	font-weight: 600;
-	padding: .15em;
+	padding: .15em 0;
 
 	&:focus { outline: none; }
 
@@ -64,6 +64,6 @@ $button-colors: (
 	}
 
 	.icon, .label {
-		padding: 0 .25em;
+		padding: 0 .15em;
 	}
 }

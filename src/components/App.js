@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { fetchGetJson, updatePost, deletePost } from './_staticFunctions';
 import Post from './Post';
 
-require('font-awesome/css/font-awesome.min.css');
 require('../styles/App.scss');
 
 const WP_URL = '/wp-json/wp/v2';
@@ -31,7 +30,7 @@ class App extends Component {
 	}
 
 	refreshPosts() {
-		fetchGetJson(`${WP_URL}/posts`)
+		fetchGetJson(`${WP_URL}/posts?per_page=5`)
 			.then(posts => this.setState({
 				posts,
 				shouldPostsUpdate: false,

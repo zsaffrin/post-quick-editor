@@ -6,7 +6,7 @@ import Post from './Post';
 require('font-awesome/css/font-awesome.min.css');
 require('../styles/App.scss');
 
-const WP_URL = 'http://localhost:8888/wp-json/wp/v2';
+const WP_URL = '/wp-json/wp/v2';
 
 class App extends Component {
 	constructor(props) {

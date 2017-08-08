@@ -25,12 +25,8 @@ const config = {
 				use: ['style-loader', 'css-loader', 'sass-loader'],
 			},
 			{
-				test: /\.(eot|ttf|woff|woff2)$/,
+				test: /\.(eot|ttf|woff|woff2|svg)$/,
 				use: 'file-loader?name=fonts/[name].[ext]',
-			},
-			{
-				test: /\.svg$/,
-				use: 'file-loader?name=img/svg/[name].[ext]',
 			},
 		],
 	},

@@ -25,7 +25,7 @@ const config = {
 				use: ['style-loader', 'css-loader', 'sass-loader'],
 			},
 			{
-				test: /\.(eot|ttf|woff|woff2|svg)$/,
+				test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
 				use: 'file-loader?name=fonts/[name].[ext]',
 			},
 		],

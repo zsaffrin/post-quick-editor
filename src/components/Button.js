@@ -6,12 +6,12 @@ require('../styles/Button.scss');
 const Button = ({ title, type, label, faIcon, action }) => {
 	let icon;
 	if (faIcon) {
-		icon = <div className={`icon fa fa-fw fa-${faIcon}`} />;
+		icon = <div className={`button-icon fa fa-${faIcon}`} />;
 	}
 
 	let labelDiv;
 	if (label.length > 0) {
-		labelDiv = <div className="label">{label}</div>;
+		labelDiv = <div className="button-label">{label}</div>;
 	}
 
 	return (

@@ -1,5 +1,6 @@
 
-$text-input-border-color: #ccc;
+$text-input-border-color: #bdc3c7;
+$danger-text-color: #c0392b;
 
 .post {
 	align-items: center;
@@ -36,5 +37,10 @@ $text-input-border-color: #ccc;
 		padding: .25em;
 
 		& > * { margin: .25em; }
+	}
+
+	.danger-text {
+		color: $danger-text-color;
+		font-weight: bold;
 	}
 }

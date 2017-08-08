@@ -1,12 +1,15 @@
 
-$post-border-color: #ecf0f1;
+$post-background-color: #ecf0f1;
+$post-border-color: #bdc3c7;
 $text-input-border-color: #bdc3c7;
 $danger-text-color: #c0392b;
 $danger-bg-color: #ffd7d3;
 
 .post {
 	align-items: center;
+	background: $post-background-color;
 	display: flex;
+	padding: .25em 0;
 
 	&:not(:last-child) {
 		border-bottom: 1px solid $post-border-color;

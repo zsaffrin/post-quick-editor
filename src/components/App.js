@@ -72,7 +72,9 @@ class App extends Component {
 
 		return (
 			<div id="app">
-				<h3>{appTitle}</h3>
+				<div className="header">
+					<h3>{appTitle}</h3>
+				</div>
 				<div className="posts">
 					{postNodes}
 				</div>

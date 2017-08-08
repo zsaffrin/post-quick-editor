@@ -5,7 +5,15 @@
 $fa-font-path: '~font-awesome/fonts';
 @import '~font-awesome/scss/font-awesome';
 
+$app-background-color: #ecf0f1;
+$app-text-color: #34495e;
+$header-background-color: #34495e;
+$header-text-color: #fff;
+
 #app {
+	background: $app-background-color;
+	border-radius: .5em;
+	color: $app-text-color;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 
@@ -13,11 +21,20 @@ $fa-font-path: '~font-awesome/fonts';
 	.h1, .h2, .h3, .h4, .h5, .h6 {
 		font-family: 'Montserrat', sans-serif;
 		font-weight: 700;
+		margin: .25em;
 		text-transform: uppercase;
+	}
+
+	.header {
+		background: $header-background-color;
+		border-radius: .5em .5em 0 0;
+		color: $header-text-color;
+		padding: .5em;
 	}
 
 	.posts {
 		display: flex;
 		flex-direction: column;
+		margin: .5em;
 	}
 }

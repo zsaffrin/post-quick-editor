@@ -22,3 +22,15 @@ export const updatePost = (url, data) => (
 			.catch(err => reject(console.error(err)));
 	})
 );
+
+export const deletePost = url => (
+	new Promise((resolve, reject) => {
+		window.fetch(url, {
+			method: 'DELETE',
+			headers: {
+				Authorization: `Basic ${window.btoa('admin:admin')}`,
+			},
+		}).then(response => resolve(response))
+			.catch(err => reject(console.error(err)));
+	})
+);

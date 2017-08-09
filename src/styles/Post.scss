@@ -1,15 +1,30 @@
 
-$text-input-border-color: #ccc;
+$post-background-color: #fff;
+$post-border-color: #dfdfdf;
+$post-box-shadow-lighter: rgba(0, 0, 0, .12);
+$post-box-shadow-darker: rgba(0, 0, 0, .24);
+$text-input-border-color: #bdc3c7;
+$danger-text-color: #c0392b;
+$danger-bg-color: #ffd7d3;
 
 .post {
 	align-items: center;
+	background: $post-background-color;
+	border: 1px solid $post-border-color;
+	border-radius: 2px;
+	box-shadow: 0 1px 3px $post-box-shadow-lighter, 0 1px 2px $post-box-shadow-darker;
 	display: flex;
+	margin: .5em;
+	padding: .25em 0;
 
 	.post-image {
+		align-items: center;
+		display: flex;
 		padding: .2em;
 
 		img {
-			border-radius: 2px;
+			border-radius: .25em;
+			padding: 0 .25em;
 			width: 4em;
 		}
 	}
@@ -24,7 +39,7 @@ $text-input-border-color: #ccc;
 			border-radius: .2em;
 			color: inherit;
 			font-family: inherit;
-			font-size: .85em;
+			font-size: .9em;
 			font-weight: inherit;
 			padding: .25em;
 			width: 100%;
@@ -36,5 +51,14 @@ $text-input-border-color: #ccc;
 		padding: .25em;
 
 		& > * { margin: .25em; }
+	}
+
+	.danger-text {
+		color: $danger-text-color;
+		font-weight: bold;
+	}
+
+	&.danger-bg {
+		background: $danger-bg-color;
 	}
 }

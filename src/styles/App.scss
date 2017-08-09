@@ -1,20 +1,63 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:400,600');
+// Load Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600|Open+Sans:400,600');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+$app-text-color: #34495e;
+$author-text-color: #95a5a6;
+$author-link-hover-color: #3498db;
 
 #app {
+	border-radius: .5em;
+	color: $app-text-color;
 	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
 	font-weight: 400;
+	max-width: 48em;
 
-	h1, h2, h3, h4, h5, h6,
-	.h1, .h2, .h3, .h4, .h5, .h6 {
+	h1, h2, h3, h4, h5, h6 {
 		font-family: 'Montserrat', sans-serif;
-		font-weight: 700;
+		font-weight: 600;
+		margin: 0;
 		text-transform: uppercase;
 	}
 
-	.bold { font-weight: 600; }
+	.header {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		padding: 5px .75em 0;
+
+		.header-author {
+			color: $author-text-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 500;
+			text-transform: uppercase;
+
+			.author-credit {
+				font-size: .8em;
+			}
+
+			.author-name {
+				&, &:visited {
+					color: inherit;
+					text-decoration: none;
+				}
+
+				&:hover {
+					color: $author-link-hover-color;
+					text-decoration: underline;
+				}
+
+				&::before {
+					content: ' ';
+				}
+			}
+		}
+	}
 
 	.posts {
 		display: flex;
 		flex-direction: column;
+		padding: .5em;
 	}
 }

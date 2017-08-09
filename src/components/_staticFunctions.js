@@ -15,8 +15,22 @@ export const updatePost = (url, data) => (
 		window.fetch(url, {
 			method: 'POST',
 			body: data,
+			credentials: 'same-origin',
 			headers: {
-				Authorization: `Basic ${window.btoa('admin:admin')}`,
+				'X-WP-Nonce': window.wpApiSettings.nonce,
+			},
+		}).then(response => resolve(response))
+			.catch(err => reject(console.error(err)));
+	})
+);
+
+export const deletePost = url => (
+	new Promise((resolve, reject) => {
+		window.fetch(url, {
+			method: 'DELETE',
+			credentials: 'same-origin',
+			headers: {
+				'X-WP-Nonce': window.wpApiSettings.nonce,
 			},
 		}).then(response => resolve(response))
 			.catch(err => reject(console.error(err)));

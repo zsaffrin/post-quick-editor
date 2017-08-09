@@ -47,7 +47,7 @@ describe('<Post />', () => {
 		expect(wrapper.find('.post-title-input')).toHaveLength(1);
 	});
 
-	it('isConfirmDelete state renders input', () => {
+	it('isConfirmDelete state renders danger-text', () => {
 		const wrapper = shallow(postStem);
 		wrapper.setState({ isConfirmDelete: false });
 		expect(wrapper.find('.danger-text')).toHaveLength(0);

@@ -12,7 +12,7 @@ class App extends Component {
 		super(props);
 		this.state = {
 			appTitle: 'Post Quick-Editor',
-			maxPostsToDisplay: 10,
+			maxPostsToDisplay: 5,
 			posts: [],
 			shouldPostsUpdate: true,
 		};

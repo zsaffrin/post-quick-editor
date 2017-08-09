@@ -1,7 +1,7 @@
 
 export const defaultStateMock = {
 	appTitle: 'Post Quick-Editor',
-	maxPostsToDisplay: 10,
+	maxPostsToDisplay: 5,
 	posts: [],
 	shouldPostsUpdate: true,
 };

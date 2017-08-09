@@ -1,5 +1,5 @@
 # post-quick-editor
----
+
 A Wordpress plugin for quick edits to your recent posts
 Currently supports editing title and deleting posts
 

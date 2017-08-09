@@ -12,6 +12,7 @@ class App extends Component {
 		super(props);
 		this.state = {
 			appTitle: 'Post Quick-Editor',
+			maxPostsToDisplay: 10,
 			posts: [],
 			shouldPostsUpdate: true,
 		};
@@ -30,7 +31,7 @@ class App extends Component {
 	}
 
 	refreshPosts() {
-		fetchGetJson(`${WP_URL}/posts?per_page=5`)
+		fetchGetJson(`${WP_URL}/posts?per_page=${this.state.maxPostsToDisplay}`)
 			.then(posts => this.setState({
 				posts,
 				shouldPostsUpdate: false,
@@ -73,7 +74,18 @@ class App extends Component {
 		return (
 			<div id="app">
 				<div className="header">
-					<h3>{appTitle}</h3>
+					<h2 className="app-title">{appTitle}</h2>
+					<div className="header-author">
+						<span className="author-credit">by</span>
+						<a
+							href="http://zachsaffrin.com"
+							target="_blank"
+							rel="noreferrer noopener"
+							className="author-name"
+						>
+							Zach Saffrin
+						</a>
+					</div>
 				</div>
 				<div className="posts">
 					{postNodes}
